@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreador de Hábitos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rastreador de Hábitos</h1>
+        <nav>
+            <ul>
+                <li><a href="#auth">Login/Cadastro</a></li>
+                <li><a href="#habits">Hábitos</a></li>
+                <li><a href="#diet">Dieta</a></li>
+                <li><a href="#workout">Treino</a></li>
+                <li><a href="#mood">Humor</a></li>
+                <li><a href="#tasks">Tarefas</a></li>
+                <li><a href="#recipes">Receitas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="auth">
+            <h2>Autenticação</h2>
+            <form id="register-form">
+                <h3>Cadastro</h3>
+                <input type="text" id="register-username" placeholder="Usuário" required>
+                <input type="password" id="register-password" placeholder="Senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <form id="login-form">
+                <h3>Login</h3>
+                <input type="text" id="login-username" placeholder="Usuário" required>
+                <input type="password" id="login-password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <section id="habits">
+            <h2>Hábitos</h2>
+            <form id="add-habit-form">
+                <input type="text" id="habit-name" placeholder="Nome do Hábito" required>
+                <select id="habit-category">
+                    <option value="diet">Dieta</option>
+                    <option value="workout">Treino</option>
+                    <option value="diary">Diário</option>
+                    <option value="mood">Humor</option>
+                    <option value="medications">Medicações</option>
+                    <option value="tasks">Tarefas</option>
+                </select>
+                <button type="submit">Adicionar Hábito</button>
+            </form>
+            <div id="habit-list"></div>
+        </section>
+
+        <section id="diet">
+            <h2>Rotina de Dieta</h2>
+            <form id="meal-plan-form">
+                <textarea id="meal-plan" placeholder="Planejar refeições..." required></textarea>
+                <button type="submit">Salvar Planejamento</button>
+            </form>
+            <form id="food-log-form">
+                <textarea id="food-log" placeholder="Registrar alimentos consumidos..." required></textarea>
+                <button type="submit">Registrar Consumo</button>
+            </form>
+            <div id="nutrition-stats"></div>
+        </section>
+
+        <section id="workout">
+            <h2>Treino</h2>
+            <form id="workout-plan-form">
+                <textarea id="workout-plan" placeholder="Planejar treinos..." required></textarea>
+                <button type="submit">Salvar Planejamento</button>
+            </form>
+            <form id="activity-log-form">
+                <textarea id="activity-log" placeholder="Registrar atividades físicas..." required></textarea>
+                <button type="submit">Registrar Atividade</button>
+            </form>
+            <div id="workout-progress"></div>
+        </section>
+
+        <section id="mood">
+            <h2>Oscilações de Humor</h2>
+            <form id="mood-log-form">
+                <input type="text" id="mood-description" placeholder="Descreva seu humor" required>
+                <button type="submit">Registrar Humor</button>
+            </form>
+            <div id="mood-graph"></div>
+        </section>
+
+        <section id="tasks">
+            <h2>Checklist de Tarefas</h2>
+            <form id="add-task-form">
+                <input type="text" id="task-name" placeholder="Nome da Tarefa" required>
+                <button type="submit">Adicionar Tarefa</button>
+            </form>
+            <div id="task-list"></div>
+        </section>
+
+        <section id="recipes">
+            <h2>Receitas</h2>
+            <form id="add-recipe-form">
+                <input type="text" id="recipe-name" placeholder="Nome da Receita" required>
+                <textarea id="recipe-details" placeholder="Detalhes da Receita..." required></textarea>
+                <button type="submit">Adicionar Receita</button>
+            </form>
+            <div id="recipe-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rastreador de Hábitos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
